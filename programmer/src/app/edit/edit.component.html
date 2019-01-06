@@ -1,0 +1,50 @@
+<div id="homeContainer">
+  <div class="whiteBorderGlassBox">
+      <div class="homeHeadContainer">
+          <div class="row">
+              <div class="col-md-auto">
+                  <div class="avatarFrameOnLine">
+                      <img src="assets/img/user.png" id="homeAvatarPicture"/>
+                  </div>
+              </div>
+              <div class="col">
+                  <td><strong>{{ us.nombre }} </strong></td>
+                  <div>
+                      <span> {{ us.correo }} </span>
+                      <br/>
+                      <span> Escribe un Mensaje Personal </span>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+</div>
+  <div class="whiteContainerPadded marto15">
+      <div class="row">
+          <div class="col">
+              <div class="form-group">
+                  <td><strong>Actualizar tu Subasta</strong></td>
+              </div>
+          </div>
+      </div>
+      <div class="col-md-9">
+          <div class="form-group">
+                <input type="text"class="form-control" [(ngModel)]="nombre" name="nombre" placeholder= "Nombre"/>
+          </div>
+          <div class="form-group">
+            <input type="text"class="form-control" [(ngModel)]="propietario" name="propietario" placeholder= "Propietario"/>
+          </div>
+          <div class="form-group">
+            <input type="text"class="form-control" [(ngModel)]="direccion" name="direccion" placeholder="Direccion"/>
+          </div>
+          <div class="form-group">
+              <input type="text"class="form-control" [(ngModel)]="cp" name="cp" placeholder="CP"/>
+            </div>
+            <div class="form-group">
+              <input type="text" class="form-control" [(ngModel)]="telefono" name="telefono" placeholder="Telefono"/>
+            </div>
+            <div class="form-group"> 
+              <input type="text" class="form-control" [(ngModel)]="descripcion" name="descripcion" placeholder="Descripcion de la Subasta"/>
+            </div>
+            <td><a class="btn btn-success" (click)="update(local.id, nombre, propietario, direccion, cp, telefono, descripcion)" >Actualizar</a></td>
+          <br>

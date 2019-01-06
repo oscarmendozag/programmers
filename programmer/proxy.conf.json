@@ -1,0 +1,28 @@
+{
+    "/operadores/*": {
+        "target": "http://oscarmg-223307.appspot.com",
+        "secure": false,
+        "changeOrigin": true
+    },
+    "/empresas/*": {
+        "target": "http://oscarmg-223307.appspot.com",
+        "secure": false,
+        "changeOrigin": true
+    },
+    "/locales/*": {
+        "target": "http://oscarmg-223307.appspot.com",
+        "secure": false,
+        "changeOrigin": true
+    },
+    "/especialidades/*": {
+        "target": "http://oscarmg-223307.appspot.com",
+        "secure": false,
+        "changeOrigin": true
+    },
+    "/frecuentes/*": {
+        "target": "http://oscarmg-223307.appspot.com",
+        "secure": false,
+        "changeOrigin": true
+    }
+
+}

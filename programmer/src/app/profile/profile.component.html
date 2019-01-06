@@ -1,0 +1,38 @@
+<br>
+<div id="profileContainer">
+  <div class="container pato45">
+    <div class="row">
+      <div class="col-md-3">
+        <div class="avatarFrameOnLine">
+          <img src="assets/img/user.png" width="200px" class="avatarImage img-fluid">
+        </div>
+        <hr/>
+        <div>
+          <span>Cambiar Foto</span>
+          <br/>
+          <td><a class="btn btn-success" (click)="cerrarsesion()" >Cerrar Sesion</a></td>
+        </div>
+      </div>
+      <div class="col-md-9">
+        <div class="form-group">
+          <td><strong>Mi ID {{ us.id }} </strong></td>
+        </div>
+        <div class="form-group"> 
+          <input type="text"class="form-control" [(ngModel)]="nombre" name="nombre" placeholder= {{us.nombre}}/>
+        </div>
+        <div class="form-group">
+          <input type="text"class="form-control" [(ngModel)]="apaterno" name="apaterno" placeholder= {{us.apaterno}}/>
+        </div>
+        <div class="form-group">
+          <input type="text" class="form-control" [(ngModel)]="correo" name="correo" placeholder= {{us.correo}}/>
+        </div>
+        <div class="form-group"> 
+          <input type="password" class="form-control" [(ngModel)]="password" name="password" placeholder= {{us.password}} disabled/>
+        </div>
+        <hr/>
+        <td><a class="btn btn-warning" (click)="update(us.id, nombre, apaterno, correo, password)" >Modificar mis datos</a></td>
+        <td><a class="btn btn-danger" (click)="delete(us.id)" >Eliminar Mi Cuenta</a></td>
+      </div> 
+    </div> 
+  </div>
+</div>

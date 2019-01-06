@@ -1,0 +1,17 @@
+#main-logo {
+    width: 300px;
+}
+#menuConteiner{
+    background: gray
+}
+.branding {
+    padding: 5px!important;
+    border-top: none !important;
+    border-right: none !important;
+  }
+  #menuConteiner > .item {
+    padding: 15px;
+    color: white;
+    cursor: pointer;
+    display: inline-block;
+  }

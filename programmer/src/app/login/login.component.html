@@ -1,0 +1,38 @@
+<section id="login" class="mb-5 mt-5">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12 col-sm-6 col-md-4 mx-auto">
+        <div class="card_login">
+          <div class="card">
+            <div class="card-body text-center">
+              
+                <h1 class="h3 mb-3 font-weight-normal" *ngIf="!isError"><img src="assets/img/pc.png" id="programmer"/></h1>
+                <div class="alert alert-danger" role="alert" *ngIf="isError">
+                  Something is wrong!
+                </div>
+                <div class="form-group">
+                    <p *ngIf="operation == 'register'">Ya tienes cuenta? <a (click)="operation = 'login'">Inicia Ahora</a></p>
+                    <p *ngIf="operation == 'login'">No tienes cuenta? <a (click)="operation = 'register'">Registrate</a></p>
+                </div>
+                <div class="form-group">
+                  <input *ngIf="operation == 'register'" [(ngModel)]="nombre" name="nombre" class="form-control marbo15" type="text" placeholder="Name" />
+                </div>
+                <div class="form-group">
+                  <input *ngIf="operation == 'register'" [(ngModel)]="apaterno" name="apaterno" class="form-control marbo15" type="text" placeholder="Last name" />
+                </div>
+                <div class="form-group">
+                    <input [(ngModel)]="correo" name="correo" class="form-control marbo15" type="correo" placeholder="Correo"/>
+                  </div>
+                  <div class="form-group">
+                      <input [(ngModel)]="password" name="password" class="form-control marbo15" type="password" placeholder="Password"/>
+                  </div>
+                  <a *ngIf="operation == 'login'" class="btn btn-primary" (click)="login(correo, password)"> Iniciar Sesión </a>
+                  <a *ngIf="operation == 'register'" class="btn btn-primary" (click)="register(nombre, apaterno, correo, password)"> Registrarme </a>
+             
+            </div>
+          </div> 
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
